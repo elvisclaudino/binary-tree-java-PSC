@@ -5,16 +5,15 @@ public class Teste {
         ArvoreABB<Integer> arvore = new ArvoreABB<>(); // Cria uma nova árvore binária de busca
 
         arvore.inserir(10); // Insere elementos na árvore
+        arvore.inserir(4);
+        arvore.inserir(3);
         arvore.inserir(5);
         arvore.inserir(15);
-        arvore.inserir(3);
-        arvore.inserir(7);
         arvore.inserir(12);
-        arvore.inserir(18);
-        arvore.inserir(19);
-        arvore.inserir(17);
-        arvore.inserir(6);
-        arvore.inserir(9);
+        arvore.inserir(20);
+
+        System.out.println("Árvore binária de busca:"); // Imprime a árvore binária de busca
+        arvore.imprimir(); // Chama o método de impressão
 
         int valorBuscado = 12; // Busca um elemento na árvore
         boolean resultadoBusca = arvore.buscar(valorBuscado); // Chama o método de busca
@@ -27,6 +26,8 @@ public class Teste {
         int valorRemovido = 15; // Remove um elemento da árvore
         arvore.remover(valorRemovido); // Chama o método de remoção
         System.out.println("O valor " + valorRemovido + " foi removido da árvore."); // Imprime o valor removido
+
+        arvore.inserir(21);
 
         System.out.println("Árvore binária de busca:"); // Imprime a árvore binária de busca
         arvore.imprimir(); // Chama o método de impressão

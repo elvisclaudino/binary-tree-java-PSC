@@ -94,10 +94,9 @@ public class ArvoreABB<T extends Comparable<T>> {
 
         imprimirRecursivo(no.getProximo(), nivel + 1); // Imprime a subárvore direita
 
-        for (int i = 0; i < nivel; i++) { // Imprime os espaços para ajustar a impressão
-            System.out.print("   ");
+        for (int i = 0; i < nivel; i++) {
+            System.out.print("     "); // Imprime a quantidade de espaços de acordo com o nível
         }
-
         System.out.println(no.getElemento()); // Imprime o elemento do nó
 
         imprimirRecursivo(no.getAnterior(), nivel + 1); // Imprime a subárvore esquerda
