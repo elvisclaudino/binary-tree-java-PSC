@@ -1,9 +1,7 @@
 package ABB;
 
-import Nó.No;
-
 public class ArvoreABB<T extends Comparable<T>> {
-    private No<T> raiz; // Nó raiz da árvore
+    private NoABB<T> raiz; // Nó raiz da árvore
 
     public ArvoreABB() {
         this.raiz = null; // Inicializa a árvore com a raiz nula
@@ -13,9 +11,9 @@ public class ArvoreABB<T extends Comparable<T>> {
         this.raiz = inserirRecursivo(raiz, elemento); // Chama o método recursivo de inserção
     }
 
-    private No<T> inserirRecursivo(No<T> no, T elemento) { // Método recursivo de inserção
+    private NoABB<T> inserirRecursivo(NoABB<T> no, T elemento) { // Método recursivo de inserção
         if(no == null) {
-            return new No<>(elemento); // Se o nó for nulo, cria um novo nó com o elemento
+            return new NoABB<>(elemento); // Se o nó for nulo, cria um novo nó com o elemento
         }
 
         if (elemento.compareTo(no.getElemento()) < 0) {
@@ -31,7 +29,7 @@ public class ArvoreABB<T extends Comparable<T>> {
         return buscarRecursivo(raiz, elemento); // Chama o método recursivo de busca
     }
 
-    private boolean buscarRecursivo(No<T> no, T elemento) { // Método recursivo de busca
+    private boolean buscarRecursivo(NoABB<T> no, T elemento) { // Método recursivo de busca
         if (no == null) {
             return false; // Se o nó for nulo, retorna falso
         }
@@ -51,7 +49,7 @@ public class ArvoreABB<T extends Comparable<T>> {
         this.raiz = removerRecursivo(raiz, elemento); // Chama o método recursivo de remoção
     }
 
-    private No<T> removerRecursivo(No<T> no, T elemento) {
+    private NoABB<T> removerRecursivo(NoABB<T> no, T elemento) {
         if (no == null) {
             return no; // Se o nó for nulo, retorna nulo
         }
@@ -75,7 +73,7 @@ public class ArvoreABB<T extends Comparable<T>> {
         return no;
     }
 
-    private T encontrarMenorElemento(No<T> no) { // Encontra o menor elemento de uma subárvore
+    private T encontrarMenorElemento(NoABB<T> no) { // Encontra o menor elemento de uma subárvore
         if (no.getAnterior() == null) {
             return no.getElemento(); // Se o nó não tiver subárvore esquerda, retorna o elemento do nó
         }
@@ -87,7 +85,7 @@ public class ArvoreABB<T extends Comparable<T>> {
         imprimirRecursivo(raiz, 0); // Chama o método recursivo de impressão
     }
 
-    private void imprimirRecursivo(No<T> no, int nivel) { // Método recursivo de impressão
+    private void imprimirRecursivo(NoABB<T> no, int nivel) { // Método recursivo de impressão
         if (no == null) {
             return; // Se o nó for nulo, retorna
         }

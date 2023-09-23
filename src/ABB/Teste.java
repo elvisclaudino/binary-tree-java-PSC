@@ -29,7 +29,6 @@ public class Teste {
 
         arvore.inserir(21);
 
-        System.out.println("Árvore binária de busca:"); // Imprime a árvore binária de busca
         arvore.imprimir(); // Chama o método de impressão
     }
 }

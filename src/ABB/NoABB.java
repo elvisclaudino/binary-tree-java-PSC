@@ -1,17 +1,17 @@
-package Nó;
+package ABB;
 
-public class No<T> {
+public class NoABB<T> {
     private T elemento;
-    private No<T> proximo;
-    private No<T> anterior;
+    private NoABB<T> proximo;
+    private NoABB<T> anterior;
 
-    public No(T elemento) {
+    public NoABB(T elemento) {
         this.elemento = elemento;
         this.proximo = null;
         this.anterior = null;
     }
 
-    public No(T elemento, No<T> proximo, No<T> anterior) {
+    public NoABB(T elemento, NoABB<T> proximo, NoABB<T> anterior) {
         this.elemento = elemento;
         this.proximo = proximo;
         this.anterior = anterior;
@@ -25,19 +25,19 @@ public class No<T> {
         this.elemento = elemento;
     }
 
-    public No<T> getProximo() {
+    public NoABB<T> getProximo() {
         return this.proximo;
     }
 
-    public void setProximo(No<T> proximo) {
+    public void setProximo(NoABB<T> proximo) {
         this.proximo = proximo;
     }
 
-    public No<T> getAnterior() {
+    public NoABB<T> getAnterior() {
         return anterior;
     }
 
-    public void setAnterior(No<T> anterior) {
+    public void setAnterior(NoABB<T> anterior) {
         this.anterior = anterior;
     }
 
