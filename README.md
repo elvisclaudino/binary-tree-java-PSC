@@ -1,5 +1,5 @@
 
-# 🌳 PjBL 2 - Árvore Binária 🌳
+# PjBL 2 - Árvore Binária
 
 Em Java, uma árvore é uma estrutura de dados que consiste em nós interconectados, onde cada nó tem zero ou mais nós filhos. Essa estrutura é amplamente utilizada para representar hierarquias de dados e é usada em várias aplicações, como em estruturas de dados, análise sintática de linguagens de programação (árvores sintáticas), organização de sistemas de arquivos, entre outros.
 
