@@ -33,10 +33,6 @@ Uma Árvore Binária de Busca (ABB) é uma estrutura de dados hierárquica em qu
 
 - **Impressão**: A impressão da árvore pode ser feita em ordem, pré-ordem ou pós-ordem, facilitando a visualização dos elementos.
 
-## Balanceamento
-
-Este projeto implementa uma ABB básica. Caso seja necessário um balanceamento rigoroso, como em uma Árvore AVL, recomenda-se realizar adaptações para garantir um balanceamento estrito.
-
 ## Uso
 
 O exemplo de uso pode ser encontrado no arquivo `Teste.java` dentro da pasta ABB, onde são demonstradas as operações de inserção, busca e impressão em uma ABB.
