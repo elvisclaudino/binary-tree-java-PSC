@@ -4,7 +4,9 @@ import EstrutaArvore.Arvore;
 import EstrutaArvore.No;
 
 public class ArvoreAVL<T extends Comparable<T>> extends Arvore<T> {
-    private No<T> raiz; // Nó raiz da árvore
+    public ArvoreAVL() {
+        super(); // Chama o construtor da classe pai
+    }
 
     @Override
     public void inserir(T elemento) {
@@ -49,6 +51,68 @@ public class ArvoreAVL<T extends Comparable<T>> extends Arvore<T> {
         return no; // Retorna o nó
     }
 
+    @Override
+    public void remover(T elemento) {
+        raiz = removerRecursivo(raiz, elemento); // Chama o método recursivo de remoção
+    }
+
+    private No<T> removerRecursivo(No<T> no, T elemento) {
+        if (no == null) {
+            return no; // Se o nó for nulo, retorna o nó
+        }
+
+        if (elemento.compareTo(no.getElemento()) < 0) {
+            no.setAnterior(removerRecursivo(no.getAnterior(), elemento));
+        } else if (elemento.compareTo(no.getElemento()) > 0) {
+            no.setProximo(removerRecursivo(no.getProximo(), elemento));
+        } else {
+            if (no.getAnterior() == null || no.getProximo() == null) {
+                No<T> temp = (no.getAnterior() != null) ? no.getAnterior() : no.getProximo(); // Se o nó tiver apenas um filho, o nó temporário recebe o filho
+
+                if (temp == null) {
+                    temp = no;
+                    no = null; // Se o nó não tiver filhos, o nó temporário recebe o nó e o nó recebe nulo
+                } else {
+                    no.setElemento(temp.getElemento()); // Se o nó tiver apenas um filho, o elemento do nó recebe o elemento do nó temporário
+                    no.setAnterior(null);
+                    no.setProximo(null);
+                }
+            } else {
+                No<T> temp = encontrarSucessorInOrder(no.getProximo());
+                no.setElemento(temp.getElemento());
+                no.setProximo(removerRecursivo(no.getProximo(), temp.getElemento()));
+            }
+        }
+
+        if (no == null) {
+            return no;
+        }
+
+        no.setAltura(1 + Math.max(obterAltura(no.getAnterior()), obterAltura(no.getProximo())));
+
+        int fatorBalanceamento = obterFatorBalanceamento(no);
+
+        if (fatorBalanceamento > 1 && obterFatorBalanceamento(no.getAnterior()) >= 0) {
+            return rotacaoDireita(no);
+        }
+
+        if (fatorBalanceamento > 1 && obterFatorBalanceamento(no.getAnterior()) < 0) {
+            no.setAnterior(rotacaoEsquerda(no.getAnterior()));
+            return rotacaoDireita(no);
+        }
+
+        if (fatorBalanceamento < -1 && obterFatorBalanceamento(no.getProximo()) <= 0) {
+            return rotacaoEsquerda(no);
+        }
+
+        if (fatorBalanceamento < -1 && obterFatorBalanceamento(no.getProximo()) > 0) {
+            no.setProximo(rotacaoDireita(no.getProximo()));
+            return rotacaoEsquerda(no);
+        }
+
+        return no;
+    }
+
     private int obterFatorBalanceamento(No<T> no) {
         if(no == null) {
             return 0; // Se o nó for nulo, retorna 0
@@ -81,5 +145,12 @@ public class ArvoreAVL<T extends Comparable<T>> extends Arvore<T> {
         y.setAltura(1 + Math.max(obterAltura(y.getAnterior()), obterAltura(y.getProximo()))); // Atualiza a altura de y
 
         return y; // Retorna o nó y
+    }
+
+    private No<T> encontrarSucessorInOrder(No<T> no) {
+        while (no.getAnterior() != null) {
+            no = no.getAnterior();
+        }
+        return no;
     }
 }
