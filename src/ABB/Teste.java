@@ -5,11 +5,11 @@ public class Teste {
         ArvoreABB<Integer> arvore = new ArvoreABB<>(); // Cria uma nova árvore binária de busca
 
         arvore.inserir(10); // Insere elementos na árvore
-        arvore.inserir(4);
-        arvore.inserir(3);
-        arvore.inserir(5);
+        arvore.inserir(7);
         arvore.inserir(15);
-        arvore.inserir(12);
+        arvore.inserir(3);
+        arvore.inserir(8);
+        arvore.inserir(17);
         arvore.inserir(20);
 
         System.out.println("Árvore binária de busca:"); // Imprime a árvore binária de busca
