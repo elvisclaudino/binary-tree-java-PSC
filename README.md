@@ -25,8 +25,8 @@ Contando com os métodos getter e setter dos mesmos.
 - **Remover**: Remoção de um elemento na árvore.
 - **Imprimir**: Impressão da árvore inteira.
 
-## A classe `Arvore` representa a ABB e a AVL propriamente dita e contém um nó raiz como ponto de entrada para a árvore, onde ela implementa a interface `Metodos`.
-Com um atributo `raiz` setado como null, para a árvore ser inicializada vazia.
+## A classe `Arvore` que implementa a interface `Metodos` representa a ABB e a AVL propriamente dita que contém um nó raiz como ponto de entrada para a árvore.
+- Com um atributo `raiz` setado como null, para a árvore ser inicializada vazia.
 Sobrescrevendo os métodos da interface e adicionando novos métodos que serão utilizados na ABB e AVL.
 - **buscarRecursivo**: Aplicará a lógica de busca.
 - **encontrarMenorElemento**: Onde o próprio nome já sugere, encontra o menor elemento contido na árvore.
