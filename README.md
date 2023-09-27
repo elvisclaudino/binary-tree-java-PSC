@@ -11,7 +11,7 @@ Em Java, uma árvore é uma estrutura de dados que consiste em nós interconecta
 
 # Estrutura da Árvore
 
-## A classe `No` representa os nós da árvore, cada um contendo um valor (ou dado) e referências para os filhos esquerdo e direito, de acordo com as regras de ABB.
+## A classe `No` representa os nós da árvore, cada um contendo um valor (ou dado) e referências para os filhos esquerdo e direito, de acordo com as regras de ABB ou AVL.
 A classe contém os atributos:
 - **Elemento**: referente ao elemento do nó.
 - **Próximo**: referente ao próximo nó.
