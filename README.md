@@ -9,25 +9,25 @@ Em Java, uma árvore é uma estrutura de dados que consiste em nós interconecta
 - [@elvisclaudino](https://github.com/elvisclaudino)
 - [@GabrielFasolim](https://github.com/GabrielFasolim)
 
-## Estrutura da Árvore
+# Estrutura da Árvore
 
-- A classe `No` representa os nós da árvore, cada um contendo um valor (ou dado) e referências para os filhos esquerdo e direito, de acordo com as regras de ABB.
-- A classe contém os atributos:
+## A classe `No` representa os nós da árvore, cada um contendo um valor (ou dado) e referências para os filhos esquerdo e direito, de acordo com as regras de ABB.
+A classe contém os atributos:
 - **Elemento**: referente ao elemento do nó.
 - **Próximo**: referente ao próximo nó.
 - **Anterior**: referente ao nó anterior.
 - **Altura**: referente a altura do nó.
-- Contando com os métodos getter e setter dos mesmos.
+Contando com os métodos getter e setter dos mesmos.
 
-- A interface `Metodos` representa os metodos contidos na Árvore Binária de Busca e na Árvore AVL.
+## A interface `Metodos` representa os metodos contidos na Árvore Binária de Busca e na Árvore AVL.
 - **Inserir**: Inserção de um novo elemento na árvore.
 - **Buscar**: Busca de um elemento na árvore.
 - **Remover**: Remoção de um elemento na árvore.
 - **Imprimir**: Impressão da árvore inteira.
 
-- A classe `Arvore` representa a ABB e a AVL propriamente dita e contém um nó raiz como ponto de entrada para a árvore, onde ela implementa a interface `Metodos`.
-- Com um atributo `raiz` setado como null, para a árvore ser inicializada vazia.
-- Sobrescrevendo os métodos da interface e adicionando novos métodos que serão utilizados na ABB e AVL.
+## A classe `Arvore` representa a ABB e a AVL propriamente dita e contém um nó raiz como ponto de entrada para a árvore, onde ela implementa a interface `Metodos`.
+Com um atributo `raiz` setado como null, para a árvore ser inicializada vazia.
+Sobrescrevendo os métodos da interface e adicionando novos métodos que serão utilizados na ABB e AVL.
 - **buscarRecursivo**: Aplicará a lógica de busca.
 - **encontrarMenorElemento**: Onde o próprio nome já sugere, encontra o menor elemento contido na árvore.
 - **obterAltura**: Retorna a altura do nó.
