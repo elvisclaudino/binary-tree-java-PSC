@@ -57,6 +57,7 @@ Uma Árvore Binária de Busca (ABB) é uma estrutura de dados hierárquica em qu
 
 O exemplo de uso pode ser encontrado no arquivo `Teste.java` dentro da pasta ABB, onde são demonstradas as operações de inserção, busca e impressão em uma ABB.
 
+![image](https://github.com/elvisclaudino/binary-tree-java-PSC/assets/102040112/764c1602-40b1-412a-a220-f8c0747fb86c)
 
 # [Árvore AVL (Balanceada)](https://www.freecodecamp.org/portuguese/news/insercao-rotacao-e-fator-de-balanceamento-da-arvore-avl-explicados/)
 
@@ -77,6 +78,9 @@ Uma Árvore AVL (Adelson-Velsky e Landis) é uma variação de uma Árvore Biná
 ## Uso
 
 O exemplo de uso pode ser encontrado no arquivo `Teste.java` dentro da pasta AVL, onde são demonstradas as operações de inserção, busca e impressão em uma ABB.
+
+![image](https://github.com/elvisclaudino/binary-tree-java-PSC/assets/102040112/786272e9-7379-4409-a6b2-a33d6f5f47cb)
+
 
 
 
