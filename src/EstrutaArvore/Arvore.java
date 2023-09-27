@@ -44,6 +44,10 @@ public class Arvore<T extends Comparable<T>> implements Metodos<T>{
         return encontrarMenorElemento(no.getAnterior()); // Se o nó tiver subárvore esquerda, busca na subárvore esquerda
     }
 
+    protected int obterAltura(No<T> no) {
+        return (no == null) ? 0 : no.getAltura(); // Retorna a altura do nó
+    }
+
     @Override
     public void imprimir() { // Imprime a árvore
         imprimirRecursivo(raiz, 0); // Chama o método recursivo de impressão

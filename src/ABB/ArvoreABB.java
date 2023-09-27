@@ -5,7 +5,7 @@ import EstrutaArvore.No;
 
 public class ArvoreABB<T extends Comparable<T>> extends Arvore<T> {
     public ArvoreABB() {
-        super();
+        super(); // Chama o construtor da classe pai
     }
 
     @Override
