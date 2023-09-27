@@ -12,12 +12,13 @@ Em Java, uma árvore é uma estrutura de dados que consiste em nós interconecta
 # Estrutura da Árvore
 
 ## A classe `No` representa os nós da árvore, cada um contendo um valor (ou dado) e referências para os filhos esquerdo e direito, de acordo com as regras de ABB ou AVL.
-A classe contém os atributos:
+<p>A classe contém os atributos:</p>
+
 - **Elemento**: referente ao elemento do nó.
 - **Próximo**: referente ao próximo nó.
 - **Anterior**: referente ao nó anterior.
 - **Altura**: referente a altura do nó.
-Contando com os métodos getter e setter dos mesmos.
+<p>Contando com os métodos getter e setter dos mesmos.</p>
 
 ## A interface `Metodos` representa os metodos contidos na Árvore Binária de Busca e na Árvore AVL.
 - **Inserir**: Inserção de um novo elemento na árvore.
@@ -26,8 +27,10 @@ Contando com os métodos getter e setter dos mesmos.
 - **Imprimir**: Impressão da árvore inteira.
 
 ## A classe `Arvore` que implementa a interface `Metodos` representa a ABB e a AVL propriamente dita que contém um nó raiz como ponto de entrada para a árvore.
-- Com um atributo `raiz` setado como null, para a árvore ser inicializada vazia.
-Sobrescrevendo os métodos da interface e adicionando novos métodos que serão utilizados na ABB e AVL.
+<p>Com um atributo raiz setado como null, para a árvore ser inicializada vazia.</p>
+
+<p>Sobrescreve os métodos da interface e também adiciona novos métodos que serão utilizados na ABB e AVL.</p>
+
 - **buscarRecursivo**: Aplicará a lógica de busca.
 - **encontrarMenorElemento**: Onde o próprio nome já sugere, encontra o menor elemento contido na árvore.
 - **obterAltura**: Retorna a altura do nó.
